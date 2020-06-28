@@ -23,7 +23,7 @@ const login = async (req, res, next) => {
             }
 
             const token = await jwt.sign(clienteToken, process.env.SECRET);
-            console.log(dni.rol);
+            //console.log(dni.rol);
             res.status(201).json({ token, "rol": dni.rol });
         }
 
